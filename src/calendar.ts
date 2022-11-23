@@ -582,10 +582,9 @@ export default class ICalCalendar {
 
 
     /**
-     * Send calendar to the user when using HTTP using the passed `ServerResponse` object.
-     * Use second parameter `filename` to change the filename, which defaults to `'calendar.ics'`.
+     * Send calendar to the user when using HTTP.
+     * Use parameter `filename` to change the filename, which defaults to `'calendar.ics'`.
      *
-     * @param response HTTP Response object which is used to send the calendar
      * @param [filename = 'calendar.ics'] Filename of the calendar file
      */
     serve(filename = 'calendar.ics'): Response {
