@@ -582,6 +582,22 @@ export default class ICalCalendar {
 
 
     /**
+     * Save ical file.
+     */
+    save(path: string): Promise<void> {
+        return Deno.writeTextFile(path, this.toString());
+    }
+
+
+    /**
+     * Save ical file synchronously.
+     */
+     saveSync(path: string): void {
+        return Deno.writeTextFileSync(path, this.toString());
+    }
+
+
+    /**
      * Send calendar to the user when using HTTP.
      * Use parameter `filename` to change the filename, which defaults to `'calendar.ics'`.
      *
