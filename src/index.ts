@@ -4,7 +4,7 @@
 
 'use strict';
 
-import ICalCalendar, {ICalCalendarData} from './calendar';
+import ICalCalendar, {ICalCalendarData} from './calendar.ts';
 
 
 /**
@@ -48,71 +48,66 @@ export default ical;
 
 export {
     default as ICalAlarm,
-    ICalAlarmData,
+    type ICalAlarmData,
     ICalAlarmType,
-    ICalAlarmTypeValue,
-    ICalAlarmJSONData,
-    ICalAttachment
-} from './alarm';
+    type ICalAlarmTypeValue,
+    type ICalAlarmJSONData,
+    type ICalAttachment
+} from './alarm.ts';
 
 export {
     default as ICalAttendee,
-    ICalAttendeeData,
+    type ICalAttendeeData,
     ICalAttendeeType,
     ICalAttendeeRole,
     ICalAttendeeStatus,
-    ICalAttendeeJSONData
-} from './attendee';
+    type ICalAttendeeJSONData
+} from './attendee.ts';
 
 export {
     default as ICalCalendar,
-    ICalCalendarData,
-    ICalCalendarProdIdData,
+    type ICalCalendarData,
+    type ICalCalendarProdIdData,
     ICalCalendarMethod,
-    ICalCalendarJSONData
-} from './calendar';
+    type ICalCalendarJSONData
+} from './calendar.ts';
 
 export {
     default as ICalCategory,
-    ICalCategoryData
-} from './category';
+    type ICalCategoryData
+} from './category.ts';
 
 export {
     default as ICalEvent,
     ICalEventStatus,
     ICalEventBusyStatus,
     ICalEventTransparency,
-    ICalEventData,
-    ICalEventJSONData,
+    type ICalEventData,
+    type ICalEventJSONData,
     ICalEventClass,
-} from './event';
+} from './event.ts';
 
 export {
-    ICalDateTimeValue,
-    ICalRepeatingOptions,
-    ICalLocation,
-    ICalGeo,
-    ICalOrganizer,
-    ICalDescription,
+    type ICalDateTimeValue,
+    type ICalRepeatingOptions,
+    type ICalLocation,
+    type ICalGeo,
+    type ICalOrganizer,
+    type ICalDescription,
     ICalEventRepeatingFreq,
     ICalWeekday,
-    ICalTimezone,
-    ICalMomentStub,
-    ICalMomentTimezoneStub,
-    ICalMomentDurationStub,
-    ICalLuxonDateTimeStub,
-    ICalDayJsStub,
-    ICalRRuleStub
-} from './types';
+    type ICalTimezone,
+    type ICalMomentStub,
+    type ICalMomentTimezoneStub,
+    type ICalMomentDurationStub,
+    type ICalLuxonDateTimeStub,
+    type ICalDayJsStub,
+    type ICalRRuleStub
+} from './types.ts';
 
 export {
     formatDate,
     formatDateTZ,
     escape,
     foldLines
-} from './tools';
-
-/* istanbul ignore else */
-if (typeof module !== 'undefined') {
-    module.exports = Object.assign(ical, module.exports);
-}
+} from './tools.ts';

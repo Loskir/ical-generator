@@ -1,8 +1,8 @@
 'use strict';
 
 
-import {addOrGetCustomAttributes, checkEnum, checkNameAndMail, escape} from './tools';
-import ICalEvent from './event';
+import {addOrGetCustomAttributes, checkEnum, checkNameAndMail, escape} from './tools.ts';
+import ICalEvent from './event.ts';
 
 
 interface ICalInternalAttendeeData {

@@ -1,6 +1,5 @@
 'use strict';
 
-import uuid from 'uuid-random';
 import {
     addOrGetCustomAttributes,
     checkDate,
@@ -13,11 +12,11 @@ import {
     isRRule,
     toDate,
     toJSON
-} from './tools';
-import ICalAttendee, {ICalAttendeeData} from './attendee';
-import ICalAlarm, {ICalAlarmData} from './alarm';
-import ICalCategory, {ICalCategoryData} from './category';
-import ICalCalendar from './calendar';
+} from './tools.ts';
+import ICalAttendee, {ICalAttendeeData} from './attendee.ts';
+import ICalAlarm, {ICalAlarmData} from './alarm.ts';
+import ICalCategory, {ICalCategoryData} from './category.ts';
+import ICalCalendar from './calendar.ts';
 import {
     ICalDateTimeValue,
     ICalDescription,
@@ -27,7 +26,9 @@ import {
     ICalRepeatingOptions,
     ICalRRuleStub,
     ICalWeekday
-} from './types';
+} from './types.ts';
+
+const uuid = () => crypto.randomUUID()
 
 
 export enum ICalEventStatus {
